@@ -1,0 +1,32 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.1"
+
+    defaultConfig {
+        applicationId "com.bit_zt.bit_ztmap0xa"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:23.0.1'
+    compile files('libs/baidumapapi_base_v3_6_0.jar')
+    compile files('libs/baidumapapi_cloud_v3_6_0.jar')
+    compile files('libs/baidumapapi_map_v3_6_0.jar')
+    compile files('libs/baidumapapi_radar_v3_6_0.jar')
+    compile files('libs/baidumapapi_search_v3_6_0.jar')
+    compile files('libs/baidumapapi_util_v3_6_0.jar')
+    compile files('libs/locSDK_6.12.jar')
+}
